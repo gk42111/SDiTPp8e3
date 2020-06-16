@@ -8,6 +8,7 @@ public:
 	string imie;
 	string nazwisko;
 	int wiek;
-	inline bool operator< (Osoba &);
+	friend ostream& operator<<(ostream& wyjscie, const Osoba& s);
+	bool operator< (const Osoba &s) const;
 };
 

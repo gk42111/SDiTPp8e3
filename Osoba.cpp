@@ -1,11 +1,10 @@
 #include "Osoba.h"
-
-
-
-inline bool Osoba::operator<(Osoba &s)
+ostream & operator<<(ostream& wyjscie, const Osoba& s)
 {
-	if (wiek < s.wiek) {
-		return true;
-	}
-	else return false;
+	return wyjscie << s.imie << " " << s.nazwisko << " " << s.wiek << endl;
+}
+
+bool Osoba::operator<(const Osoba & s) const
+{
+	return this->wiek<s.wiek;
 }
